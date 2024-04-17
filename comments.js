@@ -78,4 +78,12 @@ app.put('/comments', function(req, res) {
 // Delete a comment
 app.delete('/comments', function(req, res) {
     var id = req.body.id;
-    connection.query("DELETE FROM comments WHERE
+    connection.query("DELETE FROM comments WHERE id = ?", [id], function(error, result) {
+        if(!!error) {
+            console.log('Error in the query');
+        } else {
+            console.log('Comment deleted');
+            res.json(result);
+        }
+    });
+});
