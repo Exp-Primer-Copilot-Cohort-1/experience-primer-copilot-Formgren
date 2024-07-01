@@ -15,7 +15,7 @@ jobs:
       uses: actions/checkout@v4
     - name: Step 0 Welcome
       id: step-0-welcome
-      uses: education/autograding-command-grader@v1
+      uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: Step 0 Welcome
         setup-command: sleep 20
@@ -25,7 +25,7 @@ jobs:
         max-score: 1
     - name: Step 1 Copilot Extension
       id: step-1-copilot-extension
-      uses: education/autograding-command-grader@v1
+      uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: Step 1 Copilot Extension
         setup-command: sleep 20
@@ -35,7 +35,7 @@ jobs:
         max-score: 1
     - name: Step 2 javascript
       id: step-2-javascript
-      uses: education/autograding-command-grader@v1
+      uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: Step 2 javascript
         setup-command: sleep 20
@@ -45,7 +45,7 @@ jobs:
         max-score: 1
     - name: Step 3 Copilot Hub
       id: step-3-copilot-hub
-      uses: education/autograding-command-grader@v1
+      uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: Step 3 Copilot Hub
         setup-command: sleep 20
@@ -55,7 +55,7 @@ jobs:
         max-score: 1
     - name: Step 4 Copilot comment
       id: step-4-copilot-comment
-      uses: education/autograding-command-grader@v1
+      uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: Step 4 Copilot comment
         setup-command: sleep 20
@@ -65,7 +65,7 @@ jobs:
         max-score: 1
     - name: Step 5 finish
       id: step-5-finish
-      uses: education/autograding-command-grader@v1
+      uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: Step 5 finish
         setup-command: sleep 20
@@ -74,7 +74,7 @@ jobs:
         timeout: 10
         max-score: 1
     - name: Autograding Reporter
-      uses: education/autograding-grading-reporter@v1
+      uses: classroom-resources/autograding-grading-reporter@v1
       env:
         STEP-0-WELCOME_RESULTS: "${{steps.step-0-welcome.outputs.result}}"
         STEP-1-COPILOT-EXTENSION_RESULTS: "${{steps.step-1-copilot-extension.outputs.result}}"
